@@ -1,0 +1,15 @@
+/* Add this to your CSS or CSS module */
+.custom-alert-success {
+    background-color: #28a745; /* Change this to your desired color for success alerts */
+  }
+  
+  .custom-alert-warning {
+    background-color: #ffc107; /* Change this to your desired color for warning alerts */
+  }
+  
+  .custom-alert-error {
+    background-color: #dc3545; /* Change this to your desired color for error alerts */
+  }
+  
+
+
