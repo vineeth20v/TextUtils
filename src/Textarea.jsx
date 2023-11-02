@@ -43,6 +43,11 @@ export default function Textarea(props) {
         console.error('Error copying text to clipboard:', error);
       });
   }
+  const handleclear = () => {
+    let newtext = '';
+    setText(newtext);
+    
+  }
   const handleExtraSpaces = ()=>{
     let words = text.split(' ');
     let joinedWords = '';
@@ -66,7 +71,7 @@ const handleFirstLetterUppercase = () =>{
 
   return (
     <div className="my-2" >
-      <h3 style={{ color: props.mode === 'dark' ? '#FAF9F6' : '#332940' }}>Enter the text to analyze</h3>
+      <h3 style={{ color: props.mode === 'light' ?  '#332940': '#FAF9F6' }}>Enter the text to analyze</h3>
 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <textarea
      
@@ -88,7 +93,7 @@ const handleFirstLetterUppercase = () =>{
           <button className="btn btn-primary my-2 mx-2" onClick={handleFirstLetterUppercase}>First Word To Uppercase</button>
           <button className="btn btn-primary my-2 mx-2" onClick={copyText}>Copy Text</button>
           <button className="btn btn-primary my-2 mx-2" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
-          <button className="btn btn-primary my-2 mx-2" onClick>Clear Text</button>
+          <button className="btn btn-primary my-2 mx-2" onClick={handleclear}>Clear Text</button>
         </div>
       </div>
       <div className="container my-2">

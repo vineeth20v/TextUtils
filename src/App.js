@@ -32,7 +32,7 @@ export default function App() {
     });
   }
   useEffect(() => {
-    // Use the effect to set 'mode' in localStorage when it changes
+    
     localStorage.setItem('mode', mode);
   }, [mode]);
   return (
