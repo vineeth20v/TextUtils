@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/vineeth20v/TextUtils.git/static/css/main.87e77de7.css",
-    "main.js": "/vineeth20v/TextUtils.git/static/js/main.f0ecc27c.js",
+    "main.js": "/vineeth20v/TextUtils.git/static/js/main.5776b768.js",
     "static/js/787.8a812881.chunk.js": "/vineeth20v/TextUtils.git/static/js/787.8a812881.chunk.js",
     "index.html": "/vineeth20v/TextUtils.git/index.html",
     "main.87e77de7.css.map": "/vineeth20v/TextUtils.git/static/css/main.87e77de7.css.map",
-    "main.f0ecc27c.js.map": "/vineeth20v/TextUtils.git/static/js/main.f0ecc27c.js.map",
+    "main.5776b768.js.map": "/vineeth20v/TextUtils.git/static/js/main.5776b768.js.map",
     "787.8a812881.chunk.js.map": "/vineeth20v/TextUtils.git/static/js/787.8a812881.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.87e77de7.css",
-    "static/js/main.f0ecc27c.js"
+    "static/js/main.5776b768.js"
   ]
 }
