@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
   const { mode, toggleMode, name } = props;
@@ -11,13 +10,14 @@ export default function Navbar(props) {
     display: 'flex',
     alignItems: 'center',
     textDecoration: 'none',
-  }
+  };
+
   return (
     <nav className={`navbar navbar-expand-lg navbar-${mode} bg-${mode === 'light' ? 'dark' : 'light'}`} style={{ backgroundColor: navColor }}>
       <div className="container">
-        <Link to="/" className="navbar-brand" style={{ color: textColor }}>
+        <a href="/" className="navbar-brand" style={{ color: textColor }}>
           {name}
-        </Link>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -31,10 +31,8 @@ export default function Navbar(props) {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-           
             <li className="nav-item">
-            <Link to="/about" style={linkStyle}>About</Link>
-              
+              <a href="/about" style={linkStyle}>About</a>
             </li>
           </ul>
           <div className={`form-check form-switch text-${mode === 'light' ? 'black' : 'white'}`}>
@@ -44,8 +42,9 @@ export default function Navbar(props) {
   type="checkbox"
   role="switch"
   id="flexSwitchCheckChecked"
-  checked={mode === 'light'}
+  checked={mode === 'light'} // Closing quote added here
 />
+
             <label className="form-check-label" htmlFor="flexSwitchCheckChecked" style={{ color: textColor }}>
               Enable dark mode
             </label>
@@ -55,6 +54,7 @@ export default function Navbar(props) {
     </nav>
   );
 }
+
 
 
 

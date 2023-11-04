@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import Textarea from './Textarea';
 import Alert from './Alert';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import About from './About';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import About from './About';
 
 export default function App() {
   const [mode, setMode] = useState('dark');
@@ -39,14 +39,17 @@ export default function App() {
   return (
     <div>
       <div>
-        <Router>
+        {/* <Router>
           <Navbar name="Textutils1" mode={mode} toggleMode={toggleMode} />
           <Routes>
             <Route path="/" element={<Textarea mode={mode} showAlert={showAlert} />} />
             <Route path="/about" element={<About mode={mode} toggleMode={toggleMode} />} />
           </Routes>
           {alert.message && <Alert alert={alert} />}
-        </Router>
+        </Router> */}
+        <Navbar name="Textutils1" mode={mode} toggleMode={toggleMode}/>
+        {alert.message && <Alert alert={alert} />}
+        <Textarea  mode={mode}/>
       </div>
     </div>
   );
