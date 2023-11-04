@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
   const { mode, toggleMode, name } = props;
@@ -9,9 +8,9 @@ export default function Navbar(props) {
   return (
     <nav className={`navbar navbar-expand-lg navbar-${mode} bg-${mode === 'light' ? 'dark' : 'light'}`} style={{ backgroundColor: navColor }}>
       <div className="container">
-        <Link to="/" className="navbar-brand" style={{ color: textColor }}>
+        <a href="/" className="navbar-brand" style={{ color: textColor }}>
           {name}
-        </Link>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -26,14 +25,14 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link to="/" className="nav-link" style={{ color: textColor }}>
+              <a href="/" className="nav-link" style={{ color: textColor }}>
                 Home
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link to="/about" className="nav-link" style={{ color: textColor }}>
+              <a href="/about" className="nav-link" style={{ color: textColor }}>
                 About Us
-              </Link>
+              </a>
             </li>
           </ul>
           <div className={`form-check form-switch text-${mode === 'light' ? 'black' : 'white'}`}>
@@ -54,6 +53,8 @@ export default function Navbar(props) {
     </nav>
   );
 }
+
+
 
 
 
