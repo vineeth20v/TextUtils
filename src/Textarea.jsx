@@ -51,7 +51,7 @@ export default function Textarea(props) {
   const handleExtraSpaces = ()=>{
     let words = text.split(' ');
     let joinedWords = '';
-    // console.log(words);
+    
     words.forEach((elem)=>{
         if(elem[0] !== undefined){
             joinedWords += elem + " ";
