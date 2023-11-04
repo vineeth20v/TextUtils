@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import Textarea from './Textarea';
 import Alert from './Alert';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Use BrowserRouter here
+import { BrowserRouter as Router, Route,Routes } from 'react-router-dom'; // Use BrowserRouter here
 import About from './About';
 
 export default function App() {
@@ -39,13 +39,13 @@ export default function App() {
   return (
     <div>
   <div>
-      <Router>
+  <Router>
         <Navbar name="Textutils1" mode={mode} toggleMode={toggleMode} />
-       
-        <Routes>
-          <Route path="/about" element={<About mode={mode} toggleMode={toggleMode} />}/>
-          <Route path="/" element={<Textarea mode={mode} showAlert={showAlert} />} />
 
+        <Routes>
+        
+          <Route path="/about" element={<About mode={mode} toggleMode={toggleMode} />} />
+          <Route path="/" element={<Textarea mode={mode} showAlert={showAlert} />} />
         </Routes>
       </Router>
       {alert.message && <Alert alert={alert} />}

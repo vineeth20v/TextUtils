@@ -1,16 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
   const { mode, toggleMode, name } = props;
   const textColor = mode === 'light' ? '#FAF9F6' : '#332940';
   const navColor = mode === 'light' ? '#FFFFFF' : '#042743';
-
+  const linkStyle = {
+    color: textColor,
+    margin: '10px',
+    display: 'flex',
+    alignItems: 'center',
+    textDecoration: 'none',
+  }
   return (
     <nav className={`navbar navbar-expand-lg navbar-${mode} bg-${mode === 'light' ? 'dark' : 'light'}`} style={{ backgroundColor: navColor }}>
       <div className="container">
-        <a href="/" className="navbar-brand" style={{ color: textColor }}>
+        <Link to="/" className="navbar-brand" style={{ color: textColor }}>
           {name}
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -25,25 +32,22 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a href="/" className="nav-link" style={{ color: textColor }}>
-                Home
-              </a>
+            <Link to="Home" style={linkStyle}>Home</Link>
             </li>
             <li className="nav-item">
-              <a href="/about" className="nav-link" style={{ color: textColor }}>
-                About Us
-              </a>
+            <Link to="/about" style={linkStyle}>About</Link>
+              
             </li>
           </ul>
           <div className={`form-check form-switch text-${mode === 'light' ? 'black' : 'white'}`}>
-            <input
-              onClick={toggleMode}
-              className="form-check-input"
-              type="checkbox"
-              role="switch"
-              id="flexSwitchCheckChecked"
-              checked={mode === 'light'}
-            />
+          <input
+  onClick={toggleMode}
+  className="form-check-input"
+  type="checkbox"
+  role="switch"
+  id="flexSwitchCheckChecked"
+  checked={mode === 'light'}
+/>
             <label className="form-check-label" htmlFor="flexSwitchCheckChecked" style={{ color: textColor }}>
               Enable dark mode
             </label>
@@ -53,6 +57,8 @@ export default function Navbar(props) {
     </nav>
   );
 }
+
+
 
 
 
