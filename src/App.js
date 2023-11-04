@@ -14,10 +14,17 @@ export default function App() {
       setMode('dark');
       document.body.style.backgroundColor = '#042743';
       showAlert('Dark mode has been enabled', 'success');
+      setInterval(() => {
+        document.title = 'with the help of chat & Harry';
+      }, 2000);
     } else {
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert('Light mode has been enabled', 'success');
+      setInterval(() => {
+        document.title = 'coded by vinneth kumar';
+      }, 1500);
+  
     }
   }
 
